@@ -1,0 +1,128 @@
+extends ./layout/layout.pug
+
+block content
+
+  nav.page-nav
+    ul.main
+      li
+        a(href='') Water
+        .scrollnav
+          ul.sub
+            li
+              a(href='') Home
+            //- li
+            li
+              a(href='') Actions
+            //- li
+            li
+              a(href='') Notice
+            //- li
+            li
+              a(href='') Report
+            //- li
+            li
+              a(href='') Query Validation
+            //- li
+            li
+              a(href='') Upload Meter Reading
+            //- li
+            li
+              a(href='') FAQS
+            //- li
+          //- ul
+        //- scrollnav
+      //- li
+    //- ul
+    ul.quicklinks
+      li
+        Strong Quicklinks
+      //- li
+      li
+        a(href='') Service Request
+      //- li
+      li
+        a(href='') Business Access
+      //- li
+      li
+        a(href='') Rates Notice by Email
+      //- li
+      li
+        a(href='') Property Search
+      //- li
+      li
+        a(href='') Community Hub
+      //- li
+      li
+        a(href='') Online Form Application
+      //- li
+      li
+        a(href='') Settings
+      //- li
+    //- ul
+  //- nav
+  section.content
+    h1 Contents goes here
+      br
+      small You can define your own stylesheet for this section
+    //- h1
+    h1 Contents goes here
+      br
+      small You can define your own stylesheet for this section
+    //- h1
+    h1 Contents goes here
+      br
+      small You can define your own stylesheet for this section
+    //- h1
+    h1 Contents goes here
+      br
+      small You can define your own stylesheet for this section
+    //- h1
+    h1 Contents goes here
+      br
+      small You can define your own stylesheet for this section
+    //- h1
+    h1 Contents goes here
+      br
+      small You can define your own stylesheet for this section
+    //- h1
+    h1 Contents goes here
+      br
+      small You can define your own stylesheet for this section
+    //- h1
+    h1 Contents goes here
+      br
+      small You can define your own stylesheet for this section
+    //- h1
+    h1 Contents goes here
+      br
+      small You can define your own stylesheet for this section
+    //- h1
+    h1 Contents goes here
+      br
+      small You can define your own stylesheet for this section
+    //- h1
+    h1 Contents goes here
+      br
+      small You can define your own stylesheet for this section
+    //- h1
+    h1 Contents goes here
+      br
+      small You can define your own stylesheet for this section
+    //- h1
+    h1 Contents goes here
+      br
+      small You can define your own stylesheet for this section
+    //- h1
+  //- section
+
+block scripts
+  // External Script goes here...
+  script.
+    $(document).ready(function() {
+
+      $('.burger-bar').click(function(e) {
+        e.preventDefault();
+        $('.page-nav').toggleClass('slideout');
+      });
+
+    });

@@ -1,0 +1,241 @@
+@import '_themeconfig';
+@import '_mixins';
+@function color($color) {
+  @if (lightness($color) > 66) {
+    @return darken($base, 90%);
+  } @else {
+    @return lighten($base,100%);
+  }
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+body {
+  background: url('//www.taswater.com.au/images/UserUploadedImages/151/bg-html.jpg') no-repeat scroll center center;
+  background-size: cover;
+}
+.navbar-default .navbar-nav > li > a {
+  color: darken($base, 18.5%);
+}
+
+// HEADER
+.navbar {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  .navbar-brand {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  .navbar-header {
+    float: none;
+  }
+  ul {
+    &.nav {
+      li {
+        a {
+          & {
+            vertical-align: middle;
+            font-size: 100%;
+          }
+          span {
+            vertical-align: middle;
+          }
+          .fa-stack {
+            font-size: 80%;
+          }
+        }
+      }
+      &.pull-right {
+        > li {
+          float: left;
+        }
+      }
+    }
+  }
+}
+.burger-bar {
+  display: none;
+  margin-right: 15px;
+  i {
+    color: $base;
+  }
+}
+
+// BODY
+.container {
+  &.wrapper {
+    background: white;
+    padding: 0;
+    position: relative;
+  }
+}
+.page-nav {
+  background: $base;
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  transition: all ease-in-out .4s;
+  ul {
+    & {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      strong {
+        color: color($base);
+        padding: 10px 15px;
+        display: block;
+        border-bottom:  1px dashed;
+      }
+      a {
+        display: block;
+        color: color($base);
+        font-weight: 300;
+        padding: 10px 15px;
+        text-decoration: none;
+        &:hover {
+          background: darken($base, 18.5%);
+        }
+      }
+    }
+    &.quicklinks {
+      background: darken($base, 18.5%);
+      li {
+        a {
+          &:hover {
+            background: $base;
+          }
+        }
+      }
+    }
+  }
+  &.slideout {
+    right: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-nav {
+    right: -100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-nav {
+    position: relative;
+    width: auto;
+    top: 0;
+    ul {
+      &.main {
+        list-style: none;
+        margin-bottom: 0;
+        background: $base;
+        position: relative;
+        padding: 0;
+        margin-left: 200px;
+        > li a {
+          background: darken($base, 18.5%);
+          display: inline-block;
+          padding: 10px;
+          color: color($base);
+          text-decoration: none;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 200px;
+          left: -200px;
+          background: $base;
+        }
+      }
+      &.sub {
+        list-style: none;
+        padding: 0;
+        background: darken($base, 18.5%);
+        // position: absolute;
+        width: 100%;
+        z-index: 2;
+        white-space: nowrap;
+        overflow-x: scroll;
+        > li {
+          display: inline-block;
+          a {
+            text-decoration: none;
+          }
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 200px;
+          left: -200px;
+          background: darken($base, 18.5%);
+          z-index: 2;
+        }
+      }
+      &.quicklinks {
+        position: absolute;
+        z-index: 2;
+        top: 80px;
+        left: 0;
+
+        list-style: none;
+        padding: 0;
+        width: 200px;
+        background: $base;
+        float: left;
+        color: color($base);
+        margin-bottom: 0;
+        li {
+          strong {
+            display: block;
+            font-size: 18px;
+            font-weight: normal;
+            padding: 14px 20px 10px;
+            border: none;
+          }
+          a {
+            color: color($base);
+            font-weight: 300;
+            display: block;
+            padding: 14px 20px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  &.slideout {
+    right: -100%;
+  }
+  // Content Section
+  section {
+    &.content {
+      display: inline-block;
+      border-left: 200px solid $base;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      &:before, &:after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+    }
+  }
+}
+
+
+// FOOTER
+footer {
+  clear: both;
+}
