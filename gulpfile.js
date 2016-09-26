@@ -7,7 +7,7 @@ var autoprefixer  = require('gulp-autoprefixer');
 var exec          = require('child_process').exec;
 
 var root  = '../ttstatic.github.io/';
-var dir   = 'feconsumer'; // you may change this.
+var dir   = 'fecustomer'; // you may change this.
 var paths = {
   pug: ['./*.pug', '!**[^_]/*.pug'],
   scss: 'assets/css/**/*.scss'
